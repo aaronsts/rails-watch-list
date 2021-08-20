@@ -1,0 +1,10 @@
+<%= render 'navbar' %>
+<h1><%= @list.name %></h1>
+<%= link_to "Add Bookmark", new_list_bookmark_path(params[:id]) %>
+
+<% @list.bookmarks.each do |bookmark| %>
+  <%= bookmark.comment %>
+  <%= bookmark.movie.title %>
+  <%= link_to "delete", bookmark_path(bookmark), method: :delete,
+            data: { confirm: "Are you sure?" }, class: 'btn btn-outline-danger mt-3 '  %>
+<% end %>

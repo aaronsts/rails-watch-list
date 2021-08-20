@@ -1,0 +1,7 @@
+.list-link {
+  color: $dark-blue;
+  &:hover {
+    color: $light-gray;
+    text-decoration: none;
+  }
+}
