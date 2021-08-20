@@ -1,0 +1,10 @@
+.create-btn {
+  text-decoration: none;
+  padding: 1em;
+  color: $black;
+
+  &:hover {
+    color: $light-gray;
+    text-decoration: none;
+  }
+}

@@ -3,3 +3,13 @@ h1 {
   font-family: $headers-font;
   color: $dark-blue;
 }
+
+h2 {
+  font-family: $body-font;
+  font-size: 1.4em;
+  padding-top: 1em;
+}
+
+.title {
+  text-align: center;
+}

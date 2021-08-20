@@ -1,15 +1,18 @@
 <%= render 'navbar' %>
-<div class="text-center p-5">
-    <h1 class="">welcome to lists</h1>
-    <%= link_to "Create new list", new_list_path %>
-    <ul class="list-group list-group-flush text-center w-50 mx-auto">
-      <% @lists.each do |list| %>
-        <%= link_to list.name, list_path(list.id), class: 'list-group-item list-link' %>
-        <% if list.photos.attached? %>
-          <%= list.photos.each do |photo| %>
-              <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<div class="container">
+<div class="title">
+      <h1 class="">your lists</h1>
+      <%= link_to "Create new list", new_list_path, class: 'create-btn' %>
+</div>
+      <div class="cards">
+        <% @lists.each do |list| %>
+        <div class="grid-card" style="width: 18rem;">
+          <% if list.photos.attached? %>
+            <%= cl_image_tag list.photos[0].key, height: 300, width: 400, crop: :fill, class: 'card-img-top' %>
           <% end %>
-        <% end %>
+            <h2><%= link_to list.name, list_path(list.id), class: 'list-link title' %></h2>
+        </div>
       <% end %>
-      </ul>
+      </div>
+    </div>
 </div>
