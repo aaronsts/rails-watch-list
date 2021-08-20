@@ -1,11 +1,11 @@
 <%= render 'navbar' %>
 <h1><%= @list.name %></h1>
 <%= link_to "Add Bookmark", new_list_bookmark_path(params[:id]) %>
-  <% if @list.photo.attached? %>
-    <%= @list.photos.each do |photo| %>
+<% if @list.photos.attached? %>
+  <% @list.photos.each do |photo| %>
       <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
   <% end %>
+<% end %>
 
 <% @list.bookmarks.each do |bookmark| %>
   <%= bookmark.comment %>
