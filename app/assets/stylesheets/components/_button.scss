@@ -8,3 +8,23 @@
     text-decoration: none;
   }
 }
+
+.submit-btn {
+  margin-bottom: 1em;
+  border-radius: 8px;
+
+  color: $light-gray;
+  background-color: $black;
+  width: 100%;
+}
+
+.delete-btn {
+  text-decoration: none;
+  padding: 1em;
+  color: $light-gray;
+
+  &:hover {
+    color: $red;
+    text-decoration: none;
+  }
+}
