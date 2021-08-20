@@ -22,6 +22,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# For image hosting
+gem 'cloudinary', '~> 1.16.0'
+
 # Don't push secret keys to github
 gem 'dotenv-rails', groups: [:development, :test]
 
